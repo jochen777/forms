@@ -2,17 +2,17 @@
 <h1>Hello World!</h1>
 
 <body>
-<form action="#" th:action="@{/}" th:object="${feedback}" method="post">
+<form action="#" th:action="@{/feedback}" th:object="${feedback}" method="post">
     <table>
         <tr>
-            <td>Name:</td>
+            <td>Firstname:</td>
             <td><input type="text" th:field="*{firstname}" /></td>
-            <td th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">Name Error</td>
+            <td th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">Firstname Error</td>
         </tr>
         <tr>
-            <td>Age:</td>
+            <td>Lastname:</td>
             <td><input type="text" th:field="*{lastname}" /></td>
-            <td th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Age Error</td>
+            <td th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Lastname Error</td>
         </tr>
         <tr>
             <td><button type="submit">Submit</button></td>

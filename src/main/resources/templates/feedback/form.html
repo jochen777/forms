@@ -15,6 +15,11 @@
             <td th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Lastname Error</td>
         </tr>
         <tr>
+            <td>birthday:</td>
+            <td><input type="date" th:field="*{birthday}" /></td>
+            <td th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">birthday Error</td>
+        </tr>
+        <tr>
             <td><button type="submit">Submit</button></td>
         </tr>
     </table>

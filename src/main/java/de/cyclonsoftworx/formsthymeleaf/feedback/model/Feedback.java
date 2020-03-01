@@ -1,6 +1,7 @@
 package de.cyclonsoftworx.formsthymeleaf.feedback.model;
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -14,6 +15,7 @@ public class Feedback {
     @Size(min=2, max=30)
     String lastname;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     LocalDate birthday;
 
     String email;
